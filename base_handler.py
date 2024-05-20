@@ -25,5 +25,3 @@ class BaseHandler(tornado.web.RequestHandler):
            return user_bytes.decode("utf-8")
         else:
             return None
-
-    
