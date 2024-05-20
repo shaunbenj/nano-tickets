@@ -67,6 +67,7 @@ class TransactionManager:
         if exc_type is None:
             print("[TransactionManager] Committing MySQL transaction")
             self._connection.commit()
+            self._connection.autocommit = True
             return True
         else:
             print(f"[TransactionManager] MySQL transaction failed: {exc_type}, {exc_value}")
